@@ -9,7 +9,7 @@ import java.net.URLConnection;
 public class CEPConsumer {
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://api.github.com/users/TarllesRoman");
+			URL url = new URL("https://viacep.com.br/ws/36200074/json");
 			
 			URLConnection con = url.openConnection();
 			
