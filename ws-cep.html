@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title>
+      Consome WS CEP 
+      </title>
+  </head>
+  <body>
+    <input id="cep"></input>
+    <button id="btn">Buscar</button>
+    <div id="div1"></div>
+
+    <script>
+      var input = document.querySelector("#cep");
+      var button = document.querySelector("#btn");
+      var div1 = document.querySelector("#div1");
+
+      button.onclick = function(){
+        var req = new XMLHttpRequest();
+
+        req.onloadend = function(){
+          resp = req.responseText;
+          resp_obj = JSON.parse(resp);
+          div1.innerHTML = '\nO CEP ' + resp_obj.cep + ' pertence à rua ' +
+          resp_obj.logradouro + ' do bairro ' + resp_obj.bairro + ', ' +
+          resp_obj.localidade + '/' + resp_obj.uf;
+        }
+
+        req.open('GET', 'https://viacep.com.br/ws/' + input.value + '/json');
+        req.send(null);
+      }
+
+    </script>
+  </body>
+</html>
