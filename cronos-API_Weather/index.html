@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cronos</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="div_header">
+			<div id="header_json" class="header">
+				<input type="radio" id="radio_JSON" name="estrutura" checked>
+				<label for="radio_JSON">JSON</label>
+			</div>
+			<div id="header_xml" class="header">
+				<input type="radio" id="radio_XML" name="estrutura">
+				<label for="radio_XML">XML</label> 
+			</div>
+			<label id="lbl_cidade" class="header">Cidade:</label>
+			<input type="text" id="ipt_cidade" class="header">
+			<button id="btn_buscar" class="header">Buscar</button>
+		</div>
+		<div id="div_dados">
+			<label class="subtitle" id="nome_cid"></label>
+			<img id="icone_clima" height="60px"/><br><br>
+			<div class="dados">
+				<label class="dados_n">Coordenadas</label> <p id="coordenadas"></p>
+				<label class="dados_n">Temperatura Atual</label> <p id="temp_atual"></p>
+				<label class="dados_n">Temperatura Mínima</label> <p id="temp_min"></p>
+				<label class="dados_n">Temperatura Máxima</label> <p id="temp_max"></p> 
+				<label class="dados_n">Pressão</label> <p id="pressure"></p>
+				<label class="dados_n">Nascer do sol</label> <p id="dawn"></p>
+				<label class="dados_n">Por do sol</label> <p id="dusk"></p>
+			</div>
+		</div>
+		<div id="map"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARu4q6jqT-3Jl61a7HrE5Z7od8qNxmKno"></script>
+    	<script src="script.js"></script>
+	</body>
+</html>
