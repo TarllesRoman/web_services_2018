@@ -108,7 +108,7 @@ function loadMap(latitude, longitude){
 }
 
 function not_found(){
-	
+	alert("Cidade não encontrada!");
 }
 
 function sec_hora(sec){
